@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Angular ToDo App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="stacks">
+
+	<header>
+		<h1>The Most Simple Todo App</h1>
+	</header>
+
+	<main ng-controller="todoController">
+
+
+		<form class="add-form" ng-submit="addItem()">
+			<label for="newItem">Add a new item:</label>
+			<input type="text"  name="newItem" ng-model="newItem">
+			<input type="submit" >
+		</form>
+
+		<ul class="todo-list">
+			<li ng-repeat="item in items">
+
+				<span class="item-value" ng-show="showEdit == false">{{item.$value}} </span>
+
+				<form class="edit-form" ng-submit="editItem(item)" ng-show="showEdit" ng-init="showEdit = false">
+					<input type="text" placeholder="{{item.$value}}" ng-model="item.$value">
+					<input type="submit" ng-click="showEdit = false">
+				</form>
+
+				<div class="btns-container">
+				<span class="btn" ng-click="deleteItem(item)">Delete</span>
+				<span class="btn" ng-click="showEdit = true">Edit</span>
+				</div>
+			</li>
+		</ul>
+	</main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+
+	<!-- Firebase -->
+	<script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
+	<!-- AngularFire -->
+	<script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

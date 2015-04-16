@@ -1,0 +1,122 @@
+
+/* */
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	line-height: 2;
+	font-family: 'Inconsolata';
+	font-weight: 400;
+	background-color: #eee;
+}
+
+header {
+	margin: 5vh 5vw;
+	padding: 1vw 1vh;
+	border-bottom: 5px solid pink;
+}
+
+h1 {
+	font-weight: 700;
+}
+
+
+main {
+	margin: 0 5vw;
+	padding: 1vw 1vh;
+}
+
+/* List Items */
+
+
+
+li {
+	border-bottom: 2px solid #fff;
+	padding: 10px 0;
+	margin: 10px 0;
+
+}
+
+.btns-container {
+	float: right;
+}
+
+
+
+/* Forms */
+
+label {
+	font-weight: 700;
+}
+
+input {
+	height: 25px;
+	border: 1px solid #fff;
+	padding: 5px;
+	font-size: 1.6rem;
+	line-height: 1;
+	font-family: 'Inconsolata';
+	font-weight: 400;
+}
+
+.btn,
+input[type="submit"]  {
+	border: 1px solid #000;
+	cursor: pointer;
+	height: 25px;
+
+	text-align: center;
+	padding: 5px;
+
+}
+
+.add-form {
+	margin-bottom: 3rem;
+}
+
+.add-form input {
+	width: 100%;
+	display: block;
+	margin-bottom: 1rem;
+}
+
+
+.edit-form {
+	display: inline-block;
+	width: 70%;
+}
+
+.edit-form input[type="text"] {
+	width: 80%;
+}
+
+@media screen and (max-width: 600px) {
+
+	ul.todo-list {
+		text-align: center;
+	}
+
+	.edit-form {
+		display: block;
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+
+	.btns-container {
+		display: block;
+		float: none;
+	}
+
+}
+
+
+
+
+
+
+
+
+
